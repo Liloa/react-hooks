@@ -4,7 +4,7 @@
 import * as React from 'react'
 
 
-const useLocalStorageState = (key, defaultValue = {}.toString()) => {
+const useLocalStorageState = (key, defaultValue = '') => {
   const [state, setState] = React.useState(()=>{
     return window.localStorage.getItem(key) || defaultValue
   })
