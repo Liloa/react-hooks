@@ -4,13 +4,13 @@
 import * as React from 'react'
 
 
-const useLocalStorageState = (key, defaultValue = '') => {
+const useLocalStorageState = (key, defaultValue = {}.toString()) => {
   const [state, setState] = React.useState(()=>{
     return window.localStorage.getItem(key) || defaultValue
   })
 
   React.useEffect(()=>{
-    window.localStorage.setItem('name', state)
+    window.localStorage.setItem(key, state)
   }, [state])
 
   return [state, setState];
