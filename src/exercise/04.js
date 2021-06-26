@@ -2,6 +2,7 @@
 // http://localhost:3000/isolated/exercise/04.js
 
 import * as React from 'react'
+import {useState} from 'react'
 
 function Board() {
   // 🐨 squares is the state for this component. Add useState for squares
@@ -36,6 +37,7 @@ function Board() {
   function restart() {
     // 🐨 reset the squares
     // 💰 `Array(9).fill(null)` will do it!
+    squares.fill(null);
   }
 
   function renderSquare(i) {
